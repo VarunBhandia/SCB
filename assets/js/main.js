@@ -28,13 +28,11 @@ function fibonacci(num) {
 }
 
 function makeTable(num, limit) {
-    console.log('-----------------');
     for (i = 1; i < limit; i++) {
-        console.log('|', i, 'X', num, '|', '= |', num * i, '|');
+        console.log('', i, 'X', num, '=', num * i);
     }
-    console.log('-----------------');
-
 }
+
 console.log('%c => Fibonacci Series', styles1);
 fibonacci(10);
 
