@@ -1,16 +1,16 @@
-var styles = [
-    'color: red',
-    'font-wieght: 900',
-    'font-size: 25px',
-    'font-family: "Raleway, sans-serif"',
-].join(';');
-var styles1 = [
-    'font-family: raleway',
-    'color: blue',
-    'font-size: 20px',
-].join(';');
+// var styles = [
+//     'color: red',
+//     'font-wieght: 900',
+//     'font-size: 25px',
+//     'font-family: "Raleway, sans-serif"',
+// ].join(';');
+// var styles1 = [
+//     'font-family: raleway',
+//     'color: blue',
+//     'font-size: 20px',
+// ].join(';');
 
-console.log('%c Standard Chartered Tasks', styles);
+// console.log('%c Standard Chartered Tasks', styles);
 
 function fibonacci(num) {
     var num1 = 0;
@@ -33,8 +33,8 @@ function makeTable(num, limit) {
     }
 }
 
-console.log('%c => Fibonacci Series', styles1);
+// console.log('%c => Fibonacci Series', styles1);
 fibonacci(10);
 
-console.log('%c => Display Table', styles1);
+// console.log('%c => Display Table', styles1);
 makeTable(8, 10)
