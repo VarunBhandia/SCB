@@ -38,3 +38,13 @@ fibonacci(10);
 
 console.log('%c => Display Table', styles1);
 makeTable(8, 10)
+
+function changeImage() {
+    var element = document.getElementById('img-change');
+    if (element.src == "https://av.sc.com/in/content/images/in-term-deposit-and-earn-up-to-6.30-pa-1600x420px.jpg") {
+        element.src = 'https://av.sc.com/in/content/images/svtc_product-masthead-slider-banner.jpg'
+    }
+    else {
+        element.src = 'https://av.sc.com/in/content/images/in-term-deposit-and-earn-up-to-6.30-pa-1600x420px.jpg'
+    }
+}
