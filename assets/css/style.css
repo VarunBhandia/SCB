@@ -27,8 +27,8 @@ body {
 }
 
 .navbar-text {
-    width: 100px;
-}
+    padding: 15px;
+    width: 130px;}
 
 .card {
     height: 450px;
