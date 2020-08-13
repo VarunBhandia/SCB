@@ -18,17 +18,39 @@
 <body>
     <br>
     <br>
-    <center>
+    <div class="container">
         <form action="">
             <div>
-                <p id="error-msg" style="display: none;">You filled wrong number</p>
-
+                <div class="alert alert-danger" role="alert" id="error-msg" style="display: none;">
+                    Fill the details properly
+                </div>
+                <div class="alert alert-success" role="alert" id="success-msg" style="display: none;">
+                    Saved 
+                </div>
             </div>
-            <input type="text" name="" id="mobNumber" />
+            <input type="number" name="" id="mobNumber" />
+            <input type="text" name="" id="first_name" />
+            <input type="text" name="" id="last_name" />
+            <input type="text" name="" id="username" />
+
             <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
         </form>
-    </center>
-    <br>
+
+        <br>
+
+        <table class="table table-striped">
+            <thead>
+                <th>No</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
+    </div>
+
     <br>
 
 

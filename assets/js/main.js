@@ -49,14 +49,25 @@ function changeImage() {
     }
 }
 
+
 function submitForm() {
     var element = document.getElementById("mobNumber").value;
     var pattern = "^[7-9]{1}[0-9]{9}$";
+    var user = {}
+
+    user.mobNumber = document.getElementById("mobNumber").value;
+    user.first_name = document.getElementById("first_name").value;
+    user.last_name = document.getElementById("last_name").value;
+    user.username = document.getElementById("username").value;
     element.search(document.getElementById("mobNumber"))
-    if (element.search(pattern) >= 0) {
+    if (element.search(pattern) >= 0 && user.mobNumber && user.first_name && user.last_name && user.username) {
         document.getElementById("error-msg").style.display = "none"
         document.getElementById("success-msg").style.display = "block"
-        document.getElementById("success-msg").style.color = "red"
+        document.getElementById("success-msg").style.color = "green"
+
+
+        generate_table(user);
+
     }
     else {
         document.getElementById("success-msg").style.display = "none"
@@ -64,4 +75,32 @@ function submitForm() {
         document.getElementById("error-msg").style.color = "red"
     }
 
+}
+
+function generate_table(user) {
+
+    var tblBody = document.getElementById("table-body");
+
+    var row = document.createElement("tr");
+
+    var cell = document.createElement("td");
+
+    var cellText = document.createTextNode(user.mobNumber);
+    cell.appendChild(cellText);
+    row.appendChild(cell);
+    var cell = document.createElement("td");
+    var cellText = document.createTextNode(user.first_name);
+    cell.appendChild(cellText);
+    row.appendChild(cell);
+    var cell = document.createElement("td");
+    var cellText = document.createTextNode(user.last_name);
+    cell.appendChild(cellText);
+    row.appendChild(cell);
+    var cell = document.createElement("td");
+    var cellText = document.createTextNode(user.username);
+    cell.appendChild(cellText);
+    row.appendChild(cell);
+
+    // add the row to the end of the table body
+    tblBody.appendChild(row);
 }
