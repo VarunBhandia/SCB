@@ -24,11 +24,16 @@ body {
     text-transform: uppercase;
     background-color: #00a546;
     color: #fff;
+    position: absolute;
+    right: 160px;
 }
 
 .navbar-text {
     padding: 15px;
-    width: 130px;}
+    width: 130px;
+    position: absolute;
+    right: 20px;
+}
 
 .card {
     height: 450px;
@@ -70,6 +75,7 @@ body {
 
 }
 
+
 @media only screen and (max-width: 600px) {
     .col-md-2 {
         -ms-flex: 0 0 100%;
@@ -79,5 +85,17 @@ body {
     .card {
         height: 500px;
         background-color: white;
+    }
+    .button-login {
+        top:10px;
+        width: 100px;
+        height: 30x;
+        position: absolute;
+        right: 200px;
+    }
+    .navbar-text {
+        top:-10px;
+        position: absolute;
+        right: 60px;
     }
   }
