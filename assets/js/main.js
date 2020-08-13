@@ -48,3 +48,20 @@ function changeImage() {
         element.src = 'https://av.sc.com/in/content/images/in-term-deposit-and-earn-up-to-6.30-pa-1600x420px.jpg'
     }
 }
+
+function submitForm() {
+    var element = document.getElementById("mobNumber").value;
+    var pattern = "^[7-9]{1}[0-9]{9}$";
+    element.search(document.getElementById("mobNumber"))
+    if (element.search(pattern) >= 0) {
+        document.getElementById("error-msg").style.display = "none"
+        document.getElementById("success-msg").style.display = "block"
+        document.getElementById("success-msg").style.color = "red"
+    }
+    else {
+        document.getElementById("success-msg").style.display = "none"
+        document.getElementById("error-msg").style.display = "block"
+        document.getElementById("error-msg").style.color = "red"
+    }
+
+}
