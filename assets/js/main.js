@@ -100,7 +100,25 @@ function generate_table(user) {
     var cellText = document.createTextNode(user.username);
     cell.appendChild(cellText);
     row.appendChild(cell);
-
-    // add the row to the end of the table body
     tblBody.appendChild(row);
 }
+
+function generate_list() {
+
+    var list1 = document.getElementById("list");
+
+    var ol = document.createElement("ol");
+
+    var li = document.createElement("li");
+
+    var cellText = document.createTextNode('Varun');
+    li.appendChild(cellText);
+    ol.appendChild(li);
+    var li1 = document.createElement("li");
+    var cellText = document.createTextNode('varun 1');
+    li1.appendChild(cellText);
+    ol.appendChild(li1);
+
+    list1.appendChild(ol);
+}
+
