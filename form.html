@@ -18,40 +18,42 @@
 <body>
     <br>
     <br>
-    <div class="container">
+    <div class="container-fluid">
         <center>
             <h2>Customer Form</h2>
         </center>
         <br>
         <br>
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <form action="">
-                    <div>
-                        <div class="alert alert-danger" role="alert" id="error-msg" style="display: none;">
-                            Fill the details properly
-                        </div>
-                        <div class="alert alert-success" role="alert" id="success-msg" style="display: none;">
-                            Saved
-                        </div>
-                    </div>
+
+        <form action="">
+            <div>
+                <div class="alert alert-danger" role="alert" id="error-msg" style="display: none;">
+                    Fill the details properly
+                </div>
+                <div class="alert alert-success" role="alert" id="success-msg" style="display: none;">
+                    Saved
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Mobile Number</span>
+                            <span class="input-group-text" id="inputGroup-sizing-default">Mobile</span>
                         </div>
                         <input type="number" class="form-control" aria-label="Default"
                             aria-describedby="inputGroup-sizing-default" id="mobNumber">
                     </div>
-                    <br>
+                </div>
+                <div class="col-md-2">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Full Name</span>
+                            <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
                         </div>
                         <input type="text" class="form-control" aria-label="Default"
                             aria-describedby="inputGroup-sizing-default" id="name">
                     </div>
-                    <br>
+                </div>
+                <div class="col-md-3">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
@@ -59,24 +61,28 @@
                         <input type="email" class="form-control" aria-label="Default"
                             aria-describedby="inputGroup-sizing-default" id="email">
                     </div>
-                    <br>
-                    <label for=""> Account Type </label>
+                </div>
+                <div class="col-md-2">
                     <div class="input-group mb-3">
-                        <br>
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Account Type</label>
+                          </div>
+
                         <select name="acccount" id="acccount" class="form-control">
                             <option value="saving">Saving</option>
                             <option value="salary">Salary</option>
                         </select>
                     </div>
+                </div>
+                <div class="col-md-1">
                     <button type="button" class="btn btn-primary" onclick="submitForm()">Add</button>
-                </form>
-            </div>
-            <div class="col-md-4"></div>
-        </div>
-
-
-
+                </div>
+            </div>           
+        </form>
         <br>
+    </div>
+    <div class="container">
+
 
         <table class="table table-striped">
             <thead>
@@ -97,7 +103,7 @@
 
 </body>
 <script>
-    generate_list();
+    // generate_list();
 </script>
 
 </html>

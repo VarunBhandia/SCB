@@ -50,12 +50,14 @@ function changeImage() {
 }
 
 class User {
-    constructor(mobNumber,name,email,acccount) {
-        this.mobNumber = mobNumber
-        this.name = name
-        this.email = email
-        this.acccount = acccount
+    constructor(mobNumber, name, email, acccount) {
+       
+        this.mobNumber = mobNumber;
+        this.name = name;
+        this.email = email;
+        this.acccount = acccount;
     }
+
 }
 function submitForm() {
     var element = document.getElementById("mobNumber").value;
@@ -65,14 +67,13 @@ function submitForm() {
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var acccount = document.getElementById("acccount").value;
-
     var user = new User(mobNumber, name, email, acccount);
 
-    if (element.search(pattern) >= 0 && user.mobNumber && user.first_name && email && acccount) {
+    if (element.search(pattern) >= 0 && mobNumber && name && email && acccount) {
         document.getElementById("error-msg").style.display = "none"
         document.getElementById("success-msg").style.display = "block"
         document.getElementById("success-msg").style.color = "green"
-        
+
         generate_table(user);
 
     }
@@ -96,15 +97,15 @@ function generate_table(user) {
     cell.appendChild(cellText);
     row.appendChild(cell);
     var cell = document.createElement("td");
-    var cellText = document.createTextNode(user.first_name);
+    var cellText = document.createTextNode(user.name);
     cell.appendChild(cellText);
     row.appendChild(cell);
     var cell = document.createElement("td");
-    var cellText = document.createTextNode(user.last_name);
+    var cellText = document.createTextNode(user.email);
     cell.appendChild(cellText);
     row.appendChild(cell);
     var cell = document.createElement("td");
-    var cellText = document.createTextNode(user.username);
+    var cellText = document.createTextNode(user.acccount);
     cell.appendChild(cellText);
     row.appendChild(cell);
     tblBody.appendChild(row);
