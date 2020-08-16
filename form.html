@@ -19,52 +19,61 @@
     <br>
     <br>
     <div class="container">
-        <div class="col-md-4"></div>
-        <div class="col-md-8">
-            <form action="">
-                <div>
-                    <div class="alert alert-danger" role="alert" id="error-msg" style="display: none;">
-                        Fill the details properly
+        <center>
+            <h2>Customer Form</h2>
+        </center>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <form action="">
+                    <div>
+                        <div class="alert alert-danger" role="alert" id="error-msg" style="display: none;">
+                            Fill the details properly
+                        </div>
+                        <div class="alert alert-success" role="alert" id="success-msg" style="display: none;">
+                            Saved
+                        </div>
                     </div>
-                    <div class="alert alert-success" role="alert" id="success-msg" style="display: none;">
-                        Saved
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Mobile Number</span>
+                        </div>
+                        <input type="number" class="form-control" aria-label="Default"
+                            aria-describedby="inputGroup-sizing-default" id="mobNumber">
                     </div>
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Mobile Number</span>
+                    <br>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Full Name</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Default"
+                            aria-describedby="inputGroup-sizing-default" id="name">
                     </div>
-                    <input type="number" class="form-control" aria-label="Default"
-                        aria-describedby="inputGroup-sizing-default" id="mobNumber">
-                </div>
-                <br>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Full Name</span>
+                    <br>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                        </div>
+                        <input type="email" class="form-control" aria-label="Default"
+                            aria-describedby="inputGroup-sizing-default" id="email">
                     </div>
-                    <input type="text" class="form-control" aria-label="Default"
-                        aria-describedby="inputGroup-sizing-default" id="name">
-                </div>
-                <br>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
-                    </div>
-                    <input type="email" class="form-control" aria-label="Default"
-                        aria-describedby="inputGroup-sizing-default" id="email">
-                </div>
-                <br>
-                <div class="input-group mb-3">
+                    <br>
                     <label for=""> Account Type </label>
-                    <select name="acccount" id="acccount" class="form-control">
-                        <option value="saving">Saving</option>
-                        <option value="salary">Salary</option>
-                    </select>
-                </div>
-                <button type="button" class="btn btn-primary" onclick="submitForm()">Add</button>
-            </form>
+                    <div class="input-group mb-3">
+                        <br>
+                        <select name="acccount" id="acccount" class="form-control">
+                            <option value="saving">Saving</option>
+                            <option value="salary">Salary</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="submitForm()">Add</button>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
         </div>
-        <div class="col-md-2"></div>
+
 
 
         <br>
@@ -84,7 +93,7 @@
 
     <br>
 
-    <div id="list"></div>
+    <!-- <div id="list"></div> -->
 
 </body>
 <script>
