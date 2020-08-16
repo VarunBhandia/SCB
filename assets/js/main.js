@@ -49,23 +49,30 @@ function changeImage() {
     }
 }
 
-
+class User {
+    constructor(mobNumber,name,email,acccount) {
+        this.mobNumber = mobNumber
+        this.name = name
+        this.email = email
+        this.acccount = acccount
+    }
+}
 function submitForm() {
     var element = document.getElementById("mobNumber").value;
     var pattern = "^[7-9]{1}[0-9]{9}$";
-    var user = {}
 
-    user.mobNumber = document.getElementById("mobNumber").value;
-    user.first_name = document.getElementById("first_name").value;
-    user.last_name = document.getElementById("last_name").value;
-    user.username = document.getElementById("username").value;
-    element.search(document.getElementById("mobNumber"))
-    if (element.search(pattern) >= 0 && user.mobNumber && user.first_name && user.last_name && user.username) {
+    var mobNumber = document.getElementById("mobNumber").value;
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var acccount = document.getElementById("acccount").value;
+
+    var user = new User(mobNumber, name, email, acccount);
+
+    if (element.search(pattern) >= 0 && user.mobNumber && user.first_name && email && acccount) {
         document.getElementById("error-msg").style.display = "none"
         document.getElementById("success-msg").style.display = "block"
         document.getElementById("success-msg").style.color = "green"
-
-
+        
         generate_table(user);
 
     }
